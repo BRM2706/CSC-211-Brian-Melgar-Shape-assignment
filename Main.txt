@@ -1,0 +1,51 @@
+//Note for Professor, Im not sure if you made mistake when it says use the circle and rectangle subclasses. Becasue none of the homeworks include those.
+class Shape {
+    private int numberOfSides;
+
+    public Shape(int numberOfSides) {
+        this.numberOfSides = numberOfSides;
+    }
+    public int getNumberOfSides() {
+        return numberOfSides;
+    }
+    public void setNumberOfSides(int numberOfSides) {
+        this.numberOfSides = numberOfSides;
+    }
+}
+class Circle extends Shape {
+    private double radius;
+
+    public Circle(double radius) {
+        super(0);
+        this.radius = radius;
+    }
+    public double getRadius() {
+        return radius;
+    }
+}
+class Rectangle extends Shape {
+    private double length;
+    private double width;
+
+    public Rectangle(double length, double width) {
+        super(4);
+        this.length = length;
+        this.width = width;
+    }
+    public double getLength() {
+        return length;
+    }
+    public double getWidth() {
+        return width;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Circle c = new Circle(5.0);
+        Rectangle r = new Rectangle(4.0, 6.0);
+
+        System.out.println("Circle sides: " + c.getNumberOfSides());
+        System.out.println("Rectangle sides: " + r.getNumberOfSides());
+    }
+}
